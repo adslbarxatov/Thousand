@@ -22,7 +22,7 @@ burn out, the turn passes to the next player. The game continues until one of th
 Combinations that allow you to perform an additional roll:
 
 | Combination | Points increment |
-----------------------
+| - | - |
 | one “one” | +10 |
 | one “five” | +5 |
 | two “ones” | +20 |
@@ -59,10 +59,11 @@ Blue scales allow you to navigate with the “casks”, indicating where the pla
 points. The yellow bars show the points already saved.
 
 Keyboard:
-`[F1]` – call help;
-`[F2]` – change the interface language;
-`[F5]` – select the first player;
-`[F12]` – exit the game;
-Hold `[Space]` – shuffle the dice;
-Release `[Space]` – roll the dice;
-`[Enter]` – save current points
+
+- `[F1]` – call help;
+- `[F2]` – change the interface language;
+- `[F5]` – select the first player;
+- `[F12]` – exit the game;
+- Hold `[Space]` – shuffle the dice;
+- Release `[Space]` – roll the dice;
+- `[Enter]` – save current points
