@@ -21,32 +21,32 @@ burn out, the turn passes to the next player. The game continues until one of th
 
 Combinations that allow you to perform an additional roll:
 
-| Combination | Points increment
+| Combination | Points increment |
 ----------------------
-| one “one” | +10
-| one “five” | +5
-| two “ones” | +20
-| two “fives” | +10
-| three “ones” | +100
-| three “twos” | +20
-| three “threes” | +30
-| three “fours” | +40
-| three “fives” | +50
-| three “sixes” | +60
-| four “ones” | +200
-| four “twos” | +40
-| four “threes” | +60
-| four “fours” | +80
-| four “fives” | +100
-| four “sixes” | +120
-| five “ones” | +1000
-| five “twos” | +200
-| five “threes” | +300
-| five “fours” | +400
-| five “fives” | +500
-| five “sixes” | +600
-| “one”, “two”, “three”, “four” and “five” | +150
-| “two”, “three”, “four”, “five” and “six” | +250
+| one “one” | +10 |
+| one “five” | +5 |
+| two “ones” | +20 |
+| two “fives” | +10 |
+| three “ones” | +100 |
+| three “twos” | +20 |
+| three “threes” | +30 |
+| three “fours” | +40 |
+| three “fives” | +50 |
+| three “sixes” | +60 |
+| four “ones” | +200 |
+| four “twos” | +40 |
+| four “threes” | +60 |
+| four “fours” | +80 |
+| four “fives” | +100 |
+| four “sixes” | +120 |
+| five “ones” | +1000 |
+| five “twos” | +200 |
+| five “threes” | +300 |
+| five “fours” | +400 |
+| five “fives” | +500 |
+| five “sixes” | +600 |
+| “one”, “two”, “three”, “four” and “five” | +150 |
+| “two”, “three”, “four”, “five” and “six” | +250 |
 
 It should be noted that if the sum of the saved and current points exceeds 1000, the current points are also burned.
 
