@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HelpText" xml:space="preserve">
+    <value>Game “Thousand”
+
+The game uses 5 dice. Each player takes turns rolling the dice. If all or part of the dice form a combination, the player may optionally roll all or the remainder of the dice respectively again. Only after all the dice have taken part in the combinations, they can all be rolled again.
+
+Each roll brings points (for each roll they are counted separately), which are accumulated until the player saves them. Unsaved points are burned if some roll didn’t give any combinations. When saving points or when they burn out, the turn passes to the next player. The game continues until one of the players gets exactly 1000 points.
+
+Combinations that allow you to perform an additional roll:
+— one “one”	+10 points;
+— one “five”	+5 points;
+— two “ones”	+20 points;
+— two “fives”	+10 points;
+— three “ones”	+100 points;
+— three “twos”	+20 points;
+— three “threes”	+30 points;
+— three “fours”	+40 points;
+— three “fives”	+50 points;
+— three “sixes”	+60 points;
+— four “ones”	+200 points;
+— four “twos”	+40 points;
+— four “threes”	+60 points;
+— four “fours”	+80 points;
+— four “fives”	+100 points;
+— four “sixes”	+120 points;
+— five “ones”	+1000 points;
+— five “twos”	+200 points;
+— five “threes”	+300 points;
+— five “fours”	+400 points;
+— five “fives”	+500 points;
+— five “sixes”	+600 points;
+— “one”, “two”, “three”, “four” and “five”	+150 points;
+— “two”, “three”, “four”, “five” and “six”	+250 points.
+
+It should be noted that if the sum of the saved and current points exceeds 1000, the current points are also burned.
+
+In addition, there are so-called “casks” in the game (in the app they’re indicated on the scales from above by red areas). These are the cases where the points saved are in one of the following ranges: 0 to 100 (not including 100), 300 to 400 (not including 400), or 700 to 800 (not including 800). In these cases, the dice must be rolled until the sum of points leaves these ranges.
+
+Blue scales allow you to navigate with the “casks”, indicating where the player will be relative to them if he saves points. The yellow bars show the points already saved.
+
+Keyboard:
+[F1] – call help;
+[F2] – change the interface language;
+[F5] – select the first player;
+[F12] – exit the game;
+Hold [Space] – shuffle the dice;
+Release [Space] – roll the dice;
+[Enter] – save current points</value>
+  </data>
+  <data name="FinishGame" xml:space="preserve">
+    <value>Finish the game?</value>
+  </data>
+  <data name="GetHelp" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Cask" xml:space="preserve">
+    <value>, you’re in a cask. Roll further</value>
+  </data>
+  <data name="FailedThrow1" xml:space="preserve">
+    <value>{0:S}, this roll failed. </value>
+  </data>
+  <data name="FailedThrow2" xml:space="preserve">
+    <value>Well, {0:S}, it happens. </value>
+  </data>
+  <data name="FailedThrow3" xml:space="preserve">
+    <value>, you’re overkill.</value>
+  </data>
+  <data name="PlayerDefaultName" xml:space="preserve">
+    <value>Player </value>
+  </data>
+  <data name="PlayerWon" xml:space="preserve">
+    <value>Player {0:S} won!</value>
+  </data>
+  <data name="PointsSaved" xml:space="preserve">
+    <value>, your points are saved. </value>
+  </data>
+  <data name="SaveOrTryAgain" xml:space="preserve">
+    <value>, you can keep the points or risk again</value>
+  </data>
+  <data name="SaveOrTryAgainExt" xml:space="preserve">
+    <value>. But {0:D} points are not lying on the road!</value>
+  </data>
+  <data name="ThrowDice" xml:space="preserve">
+    <value>, roll the dice</value>
+  </data>
+  <data name="ThrowDiceButton" xml:space="preserve">
+    <value>&amp;Roll the dice</value>
+  </data>
+  <data name="WhoIsFirstButton" xml:space="preserve">
+    <value>&amp;Who is first?</value>
+  </data>
+  <data name="FirstStatus" xml:space="preserve">
+    <value>We need to determine who will roll the dice first</value>
+  </data>
+  <data name="SaveScoresButton" xml:space="preserve">
+    <value>&amp;Save scores</value>
+  </data>
+</root>

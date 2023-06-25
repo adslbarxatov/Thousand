@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HelpText" xml:space="preserve">
+    <value>Игра «Тысяча»
+
+Для игры используются 5 игральных кубиков. Каждый игрок по очереди бросает кубики. Если все или часть кубиков формируют некоторую комбинацию, игрок может по желанию бросить все или оставшуюся часть кубиков соответственно ещё раз. Только после того, как все кубики поучаствовали в комбинациях, их можно все бросать заново.
+
+Каждый бросок приносит очки (для каждого броска они считаются отдельно), которые накапливаются до того как игрок не сохранит их. Несохранённые очки сгорают, если какой-то бросок не дал никаких комбинаций. При сохранении очков или при их сгорании ход переходит к следующему игроку. Игра продолжается до получения одним из игроков ровно 1000 очков.
+
+Комбинации, позволяющие выполнить дополнительный бросок:
+— одна единица		+10 очков;
+— одна пятёрка		+5 очков;
+— две единицы		+20 очков;
+— две пятёрки		+10 очков;
+— три единицы		+100 очков;
+— три двойки		+20 очков;
+— три тройки		+30 очков;
+— три четвёрки		+40 очков;
+— три пятёрки		+50 очков;
+— три шестёрки		+60 очков;
+— четыре единицы	+200 очков;
+— четыре двойки		+40 очков;
+— четыре тройки		+60 очков;
+— четыре четвёрки	+80 очков;
+— четыре пятёрки		+100 очков;
+— четыре шестёрки	+120 очков;
+— пять единиц		+1000 очков;
+— пять двоек		+200 очков;
+— пять троек		+300 очков;
+— пять четвёрок		+400 очков;
+— пять пятёрок		+500 очков;
+— пять шестёрок		+600 очков;
+— единица, двойка, тройка, четвёрка и пятёрка	+150 очков;
+— двойка, тройка, четвёрка, пятёрка и шестёрка	+250 очков.
+
+Следует отметить, что, если сумма сохранённых и текущих очков превышает 1000, текущие очки также сгорают.
+
+Кроме того, в игре существуют так называемые «бочки» (в программе указаны на шкалах сверху красными областями). Это – те случаи, когда сохранённые очки находятся в одном из следующих диапазонов: от 0 до 100 (не включая 100), от 300 до 400 (не включая 400) или от 700 до 800 (не включая 800). В этих случаях кубики нужно бросать до тех пор, пока сумма очков не покинет эти диапазоны.
+
+Ориентироваться с «бочками» позволяют синие шкалы, указывающие, где относительно них окажется игрок, если сохранит очки. Жёлтые шкалы показывают уже сохранённые очки.
+
+Клавиатура:
+[F1] – вызвать справку;
+[F2] — изменить язык интерфейса;
+[F5] — выбрать первого игрока;
+[F12] — выйти из игры;
+Удерживать [Пробел] — перемешивать кости;
+Отпустить [Пробел] – бросить кости;
+[Enter] — сохранить текущие точки</value>
+  </data>
+  <data name="FinishGame" xml:space="preserve">
+    <value>Завершить игру?</value>
+  </data>
+  <data name="GetHelp" xml:space="preserve">
+    <value>&amp;Справка</value>
+  </data>
+  <data name="Cask" xml:space="preserve">
+    <value>, Вы в бочке. Бросайте дальше</value>
+  </data>
+  <data name="FailedThrow1" xml:space="preserve">
+    <value>{0:S}, этот бросок не удался. </value>
+  </data>
+  <data name="FailedThrow2" xml:space="preserve">
+    <value>Ну, {0:S}, бывает и так. </value>
+  </data>
+  <data name="FailedThrow3" xml:space="preserve">
+    <value>, у вас перебор. </value>
+  </data>
+  <data name="PlayerDefaultName" xml:space="preserve">
+    <value>Игрок </value>
+  </data>
+  <data name="PlayerWon" xml:space="preserve">
+    <value>Игрок {0:S} победил!</value>
+  </data>
+  <data name="PointsSaved" xml:space="preserve">
+    <value>, Ваши очки сохранены. </value>
+  </data>
+  <data name="SaveOrTryAgain" xml:space="preserve">
+    <value>, Вы можете сохранить очки или рискнуть ещё раз</value>
+  </data>
+  <data name="SaveOrTryAgainExt" xml:space="preserve">
+    <value>. Но {0:D} очков на дороге не валяются!</value>
+  </data>
+  <data name="ThrowDice" xml:space="preserve">
+    <value>, бросайте кости</value>
+  </data>
+  <data name="FirstStatus" xml:space="preserve">
+    <value>Нужно определить, кто будет бросать кости первым</value>
+  </data>
+  <data name="SaveScoresButton" xml:space="preserve">
+    <value>&amp;Оставить очки</value>
+  </data>
+  <data name="ThrowDiceButton" xml:space="preserve">
+    <value>&amp;Бросить кости</value>
+  </data>
+  <data name="WhoIsFirstButton" xml:space="preserve">
+    <value>&amp;Кто первый?</value>
+  </data>
+</root>

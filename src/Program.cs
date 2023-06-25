@@ -3,18 +3,14 @@ using System.Windows.Forms;
 
 namespace RD_AAOW
 	{
-	/// <summary>
-	/// Класс описывает точку входа приложения
-	/// </summary>
-	public static class DatesDifferenceProgram
+	static class Program
 		{
 		/// <summary>
-		/// Главная точка входа для приложения
+		/// Главная точка входа для приложения.
 		/// </summary>
 		[STAThread]
-		public static void Main ()
+		static void Main ()
 			{
-			// Инициализация
 			Application.EnableVisualStyles ();
 			Application.SetCompatibleTextRenderingDefault (false);
 

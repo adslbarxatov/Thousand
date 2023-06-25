@@ -58,6 +58,8 @@ the sum of points leaves these ranges.
 Blue scales allow you to navigate with the “casks”, indicating where the player will be relative to them if he saves
 points. The yellow bars show the points already saved.
 
+---
+
 Keyboard:
 
 - `[F1]` – call help;
