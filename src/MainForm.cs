@@ -76,8 +76,6 @@ namespace RD_AAOW
 			Pl3PB1Line3.Left = Pl3PB1Back.Left + (int)(7.0f * (float)Pl3PB1Back.Width / 10.0f);
 			Pl1PB1Line3.Width = Pl2PB1Line3.Width = Pl3PB1Line3.Width = (int)((float)Pl1PB1Back.Width / 10.0f);
 
-			/*Pl1PB2Line.Width = Pl2PB2Line.Width = Pl3PB2Line.Width = 0;
-			Pl1PB3Line.Width = Pl2PB3Line.Width = Pl3PB3Line.Width = 0;*/
 			foreach (Label l in preLines)
 				l.Width = 0;
 			foreach (Label l in totalLines)
@@ -193,20 +191,6 @@ namespace RD_AAOW
 			foreach (Label l in cubes)
 				if (l.Enabled)
 					l.Text = sides[rnd.Next (sides.Count)];
-			/*if (Cube1.Enabled)
-				Cube1.Text = sides[rnd.Next (6)];
-
-			if (Cube2.Enabled)
-				Cube2.Text = sides[rnd.Next (6)];
-
-			if (Cube3.Enabled)
-				Cube3.Text = sides[rnd.Next (6)];
-
-			if (Cube4.Enabled)
-				Cube4.Text = sides[rnd.Next (6)];
-
-			if (Cube5.Enabled)
-				Cube5.Text = sides[rnd.Next (6)];*/
 
 			// Ожидаем отпускания клавиши
 			if (rotatingBones)
@@ -231,11 +215,6 @@ namespace RD_AAOW
 				if (!haveActiveCubes)
 					foreach (Label l in cubes)
 						l.Enabled = true;
-				/*if ((Cube1.Enabled == Cube2.Enabled) && (Cube2.Enabled == Cube3.Enabled) &&
-					(Cube3.Enabled == Cube4.Enabled) && (Cube4.Enabled == Cube5.Enabled) && (Cube5.Enabled == false))
-					{
-					Cube1.Enabled = Cube2.Enabled = Cube3.Enabled = Cube4.Enabled = Cube5.Enabled = true;
-					}*/
 
 				// Проверка очков
 				if (preScores != 0)
@@ -247,10 +226,6 @@ namespace RD_AAOW
 					// Обновление строки состояния
 					if (preScores == 0)
 						{
-						/*if (GetCurrentPlayerPreScores () != 0)
-							StatusLine.Text = GetCurrentPlayerName () + ", этот бросок не удался. ";
-						else
-							StatusLine.Text = "Ну, " + GetCurrentPlayerName () + ", бывает и так. ";*/
 						StatusLine.Text = string.Format (Localization.GetText ("FailedThrow" +
 							(GetCurrentPlayerPreScores () != 0 ? "1" : "2")), GetCurrentPlayerName ());
 						}
@@ -272,7 +247,6 @@ namespace RD_AAOW
 					// Переключение кнопок
 					DisableButton (SaveScores);
 					EnableButton (NewCubes);
-					/*Cube1.Enabled = Cube2.Enabled = Cube3.Enabled = Cube4.Enabled = Cube5.Enabled = true;*/
 
 					foreach (Label l in cubes)
 						l.Enabled = true;
@@ -284,8 +258,6 @@ namespace RD_AAOW
 					{
 					// Сообщения
 					StatusLine.Text = string.Format (Localization.GetText ("PlayerWon"), GetCurrentPlayerName ());
-					/*MessageBox.Show ("Игрок " + GetCurrentPlayerName () + " победил!",
-						ProgramDescription.AssemblyTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 					RDGenerics.MessageBox (RDMessageTypes.Success, StatusLine.Text);
 
 					// Сброс настроек и перезапуск
@@ -299,9 +271,6 @@ namespace RD_AAOW
 						playerScoresLabels[i].Text = "0";
 						}
 
-					/*SaveNames ();
-					Application.Restart ();*/
-
 					DisableButton (SaveScores);
 					EnableButton (NewCubes);
 					foreach (Label l in cubes)
@@ -314,7 +283,6 @@ namespace RD_AAOW
 				if (GetCurrentPlayerPreScores () >= 50)
 					StatusLine.Text += string.Format (Localization.GetText ("SaveOrTryAgainExt"),
 						GetCurrentPlayerPreScores ());
-				/*StatusLine.Text += ". Но " + GetCurrentPlayerPreScores () + " очков на дороге не валяются!";*/
 
 				EnableButton (NewCubes);
 
@@ -339,27 +307,12 @@ namespace RD_AAOW
 			uint scores = 0;
 
 			// Получение количеств разных сторон кубиков
-			/*counts[0] = counts[1] = counts[2] = counts[3] = counts[4] = counts[5] = 0;*/
 			for (int i = 0; i < counts.Length; i++)
 				counts[i] = 0;
 
 			foreach (Label l in cubes)
 				if (l.Enabled)
 					counts[sides.IndexOf (l.Text)]++;
-			/*if (Cube1.Enabled)
-				counts[sides.IndexOf (Cube1.Text)]++;
-
-			if (Cube2.Enabled)
-				counts[sides.IndexOf (Cube2.Text)]++;
-
-			if (Cube3.Enabled)
-				counts[sides.IndexOf (Cube3.Text)]++;
-
-			if (Cube4.Enabled)
-				counts[sides.IndexOf (Cube4.Text)]++;
-
-			if (Cube5.Enabled)
-				counts[sides.IndexOf (Cube5.Text)]++;*/
 
 			// Поиск комбинаций
 			#region Стриты
@@ -562,47 +515,11 @@ namespace RD_AAOW
 			foreach (Label l in cubes)
 				if (l.Text == CubeSide)
 					l.Enabled = false;
-
-			/*if (Cube1.Text == CubeSide)
-				Cube1.Enabled = false;
-
-			if (Cube2.Text == CubeSide)
-				Cube2.Enabled = false;
-
-			if (Cube3.Text == CubeSide)
-				Cube3.Enabled = false;
-
-			if (Cube4.Text == CubeSide)
-				Cube4.Enabled = false;
-
-			if (Cube5.Text == CubeSide)
-				Cube5.Enabled = false;*/
 			}
 
 		// Вспомогательные функции назначения текущий очков
 		private void AddCurrentPlayerPreScores (uint Value)
 			{
-			/*switch (currentPlayer)
-				{
-				case 1:
-					Player1PreScore.Text = (uint.Parse (Player1PreScore.Text) + Value).ToString ();
-					Player1Score.Text = (uint.Parse (Player1Score.Text) + Value).ToString ();
-					Pl1PB2Line.Width = (int)((float)Pl1PB2Back.Width * (float)uint.Parse (Player1Score.Text) / 1000.0f);
-					break;
-
-				case 2:
-					Player2PreScore.Text = (uint.Parse (Player2PreScore.Text) + Value).ToString ();
-					Player2Score.Text = (uint.Parse (Player2Score.Text) + Value).ToString ();
-					Pl2PB2Line.Width = (int)((float)Pl2PB2Back.Width * (float)uint.Parse (Player2Score.Text) / 1000.0f);
-					break;
-
-				case 3:
-					Player3PreScore.Text = (uint.Parse (Player3PreScore.Text) + Value).ToString ();
-					Player3Score.Text = (uint.Parse (Player3Score.Text) + Value).ToString ();
-					Pl3PB2Line.Width = (int)((float)Pl3PB2Back.Width * (float)uint.Parse (Player3Score.Text) / 1000.0f);
-					break;
-				}*/
-
 			int i = (int)currentPlayer - 1;
 			playerPreScoresLabels[i].Text = (uint.Parse (playerPreScoresLabels[i].Text) + Value).ToString ();
 
@@ -613,27 +530,6 @@ namespace RD_AAOW
 
 		private void ResetCurrentPlayerPreScores ()
 			{
-			/*switch (currentPlayer)
-				{
-				case 1:
-					Player1PreScore.Text = "0";
-					Player1Score.Text = playerScores[0].ToString ();
-					Pl1PB2Line.Width = Pl1PB3Line.Width;
-					break;
-
-				case 2:
-					Player2PreScore.Text = "0";
-					Player2Score.Text = playerScores[1].ToString ();
-					Pl2PB2Line.Width = Pl2PB3Line.Width;
-					break;
-
-				case 3:
-					Player3PreScore.Text = "0";
-					Player3Score.Text = playerScores[2].ToString ();
-					Pl3PB2Line.Width = Pl3PB3Line.Width;
-					break;
-				}*/
-
 			int i = (int)currentPlayer - 1;
 
 			playerPreScoresLabels[i].Text = "0";
@@ -645,27 +541,6 @@ namespace RD_AAOW
 		private void SaveScores_Click (object sender, EventArgs e)
 			{
 			// Сохранение очков
-			/*switch (currentPlayer)
-				{
-				case 1:
-					playerScores[0] = uint.Parse (Player1Score.Text);
-					Pl1PB2Line.Width = Pl1PB3Line.Width = (int)((float)Pl1PB2Back.Width *
-						(float)(uint.Parse (Player1Score.Text)) / 1000.0f);
-					break;
-
-				case 2:
-					playerScores[1] = uint.Parse (Player2Score.Text);
-					Pl2PB2Line.Width = Pl2PB3Line.Width = (int)((float)Pl2PB2Back.Width *
-						(float)(uint.Parse (Player2Score.Text)) / 1000.0f);
-					break;
-
-				case 3:
-					playerScores[2] = uint.Parse (Player3Score.Text);
-					Pl3PB2Line.Width = Pl3PB3Line.Width = (int)((float)Pl3PB2Back.Width *
-						(float)(uint.Parse (Player3Score.Text)) / 1000.0f);
-					break;
-				}*/
-
 			int i = (int)currentPlayer - 1;
 			playerScores[i] = uint.Parse (playerScoresLabels[i].Text);
 			preLines[i].Width = totalLines[i].Width = (int)((float)preBacks[i].Width *
@@ -680,7 +555,6 @@ namespace RD_AAOW
 			StatusLine.Text += (GetCurrentPlayerName () + Localization.GetText ("ThrowDice"));
 
 			DisableButton (SaveScores);
-			/*Cube1.Enabled = Cube2.Enabled = Cube3.Enabled = Cube4.Enabled = Cube5.Enabled = true;*/
 			foreach (Label l in cubes)
 				l.Enabled = true;
 			}
@@ -688,54 +562,12 @@ namespace RD_AAOW
 		// Вспомогательная функция получения пре-очков текущего игрока
 		private uint GetCurrentPlayerPreScores ()
 			{
-			/*switch (currentPlayer)
-				{
-				case 1:
-					return uint.Parse (Player1PreScore.Text);
-
-				case 2:
-					return uint.Parse (Player2PreScore.Text);
-
-				case 3:
-					return uint.Parse (Player3PreScore.Text);
-				}
-
-			return 0;*/
 			return uint.Parse (playerPreScoresLabels[(int)currentPlayer - 1].Text);
 			}
 
 		// Загрузка и выгрузка имён игроков
 		private void LoadNames ()
 			{
-			/* Попытка открытия файла
-			FileStream FS = null;
-			try
-				{
-				FS = new FileStream (Application.StartupPath + "\\Thousand.cfg", FileMode.Open);
-				}
-			catch
-				{
-				SaveNames ();
-				return;
-				}
-			StreamReader SR = new StreamReader (FS, System.Text.Encoding.GetEncoding (1251));
-
-			// Загрузка
-			try
-				{
-				Player1Name.Text = SR.ReadLine ();
-				Player2Name.Text = SR.ReadLine ();
-				Player3Name.Text = SR.ReadLine ();
-				}
-			catch
-				{
-				SaveNames ();
-				}
-
-			// Завершение
-			SR.Close ();
-			FS.Close ();*/
-
 			for (int i = 0; i < playerNames.Count; i++)
 				{
 				playerNames[i].Text = RDGenerics.GetAppSettingsValue ("P" + (i + 1).ToString ());
@@ -747,26 +579,6 @@ namespace RD_AAOW
 
 		private void SaveNames ()
 			{
-			/* Попытка открытия файла
-			FileStream FS = null;
-			try
-				{
-				FS = new FileStream (Application.StartupPath + "\\Thousand.cfg", FileMode.Create);
-				}
-			catch
-				{
-				}
-			StreamWriter SW = new StreamWriter (FS, System.Text.Encoding.GetEncoding (1251));
-
-			// Загрузка
-			SW.WriteLine (Player1Name.Text);
-			SW.WriteLine (Player2Name.Text);
-			SW.WriteLine (Player3Name.Text);
-
-			// Завершение
-			SW.Close ();
-			FS.Close ();*/
-
 			RDGenerics.SetAppSettingsValue ("P1", Player1Name.Text);
 			RDGenerics.SetAppSettingsValue ("P2", Player2Name.Text);
 			RDGenerics.SetAppSettingsValue ("P3", Player3Name.Text);
@@ -814,11 +626,6 @@ namespace RD_AAOW
 						BSelectPlayer_Click (null, null);
 					return true;
 
-				/*case Keys.Space:
-					if (NewCubes.Enabled)
-						NewCubes_Click (null, null);
-					return true;*/
-
 				case Keys.Return:
 					if (SaveScores.Enabled)
 						SaveScores_Click (null, null);
@@ -832,20 +639,6 @@ namespace RD_AAOW
 		private string GetCurrentPlayerName ()
 			{
 			return playerNames[(int)currentPlayer - 1].Text;
-
-			/*switch (currentPlayer)
-				{
-				case 1:
-					return Player1Name.Text;
-
-				case 2:
-					return Player2Name.Text;
-
-				case 3:
-					return Player3Name.Text;
-				}
-
-			return "";*/
 			}
 
 		// Выход из игры
@@ -870,8 +663,6 @@ namespace RD_AAOW
 		// Закрытие окна
 		private void MainForm_FormClosing (object sender, FormClosingEventArgs e)
 			{
-			/*if (MessageBox.Show ("Завершить игру?", ProgramDescription.AssemblyTitle, MessageBoxButtons.YesNo,
-				MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)*/
 			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question, "FinishGame", LzDefaultTextValues.Button_Yes,
 				LzDefaultTextValues.Button_No) != RDMessageButtons.ButtonOne)
 				{

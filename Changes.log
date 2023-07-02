@@ -1,5 +1,9 @@
 Thousand: changes log
 
+Version 2.0.7:
+• Added UTF32 encoding;
+• The interface was adapted to Windows 10, incorrect window borders were fixed
+
 Version 2.0:
 • Publication on GitHub;
 • App has been integrated into the FDL versioning system and now has an English localization;
