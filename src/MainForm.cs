@@ -258,7 +258,7 @@ namespace RD_AAOW
 					{
 					// Сообщения
 					StatusLine.Text = string.Format (Localization.GetText ("PlayerWon"), GetCurrentPlayerName ());
-					RDGenerics.MessageBox (RDMessageTypes.Success, StatusLine.Text);
+					RDGenerics.MessageBox (RDMessageTypes.Success_Center, StatusLine.Text);
 
 					// Сброс настроек и перезапуск
 					for (int i = 0; i < playerNames.Count; i++)
@@ -663,8 +663,8 @@ namespace RD_AAOW
 		// Закрытие окна
 		private void MainForm_FormClosing (object sender, FormClosingEventArgs e)
 			{
-			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question, "FinishGame", LzDefaultTextValues.Button_Yes,
-				LzDefaultTextValues.Button_No) != RDMessageButtons.ButtonOne)
+			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question_Center, "FinishGame",
+				LzDefaultTextValues.Button_Yes, LzDefaultTextValues.Button_No) != RDMessageButtons.ButtonOne)
 				{
 				e.Cancel = true;
 				return;

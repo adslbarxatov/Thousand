@@ -1,4 +1,6 @@
-_Changes for v 2.0.7_:
+_Changes for v 2.1_:
+- Rewritten settings operator: it should fix problems with requiring administrator rights;
+- Updated the interface of message boxes;
 - Added UTF32 encoding;
 - The interface was adapted to Windows 10, incorrect window borders were fixed;
 - Publication on GitHub;

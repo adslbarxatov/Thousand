@@ -154,7 +154,7 @@ It should be noted that if the sum of the saved and current points exceeds 1000,
 
 In addition, there are so-called “casks” in the game (in the app they’re indicated on the scales from above by red areas). These are the cases where the points saved are in one of the following ranges: 0 to 100 (not including 100), 300 to 400 (not including 400), or 700 to 800 (not including 800). In these cases, the dice must be rolled until the sum of points leaves these ranges.
 
-Blue scales allow you to navigate with the “casks”, indicating where the player will be relative to them if he saves points. The yellow bars show the points already saved.
+Purple scales allow you to navigate with the “casks”, indicating where the player will be relative to them if he saves points. The yellow bars show the points already saved.
 
 Keyboard:
 [F1] – call help;
