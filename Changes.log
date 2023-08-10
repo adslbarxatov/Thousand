@@ -1,5 +1,11 @@
 Thousand: changes log
 
+Version 2.1.5:
+• Implemented the access rights checker: it will test the availability of the Windows registry
+  and the application placement for writing and notify user about possible problems;
+• Updated the user manual;
+• Updated the storage method of text tips
+
 Version 2.1:
 • Rewritten settings operator: it should fix problems with requiring administrator rights;
 • Updated the interface of message boxes

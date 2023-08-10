@@ -43,8 +43,10 @@ namespace RD_AAOW
 			{
 			// Заголовок
 			this.Text = ProgramDescription.AssemblyTitle;
-			RDGenerics.LoadWindowDimensions (this);
+			if (!RDGenerics.IsRegistryAccessible)
+				this.Text += Localization.GetDefaultText (LzDefaultTextValues.Message_LimitedFunctionality);
 
+			RDGenerics.LoadWindowDimensions (this);
 			LocalizeForm ();
 
 			// Выключение пока ненужных кнопок
