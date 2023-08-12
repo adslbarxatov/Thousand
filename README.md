@@ -1,5 +1,5 @@
-# Thousand v 2.1.5
-> PCC: 0003795AE9701368
+# Thousand v 2.1.7
+> PCC: 0003795A342A59A0
 
 
 This app imitates the “Thousand” game for three players.
