@@ -1,5 +1,8 @@
 Thousand: changes log
 
+Version 2.1.8:
+• Added the obvious URL for text guide
+
 Version 2.1.7:
 • Fixed some issues with the Policy loader where it would sometimes ask for multiple confirmations
 
