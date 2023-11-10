@@ -1,3 +1,3 @@
-_Changes for v 2.1.11_:
-- Updates and fixes have been applied to the update polling mechanism, as well as to other auxiliary functions;
-- New identity has been applied
+_Changes for v 2.1.13_:
+- The offline quick help has been discontinued;
+- Completed the process of version control unification

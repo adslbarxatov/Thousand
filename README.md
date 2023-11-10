@@ -1,12 +1,15 @@
-# Thousand v 2.1.11
-> PCC: 00037E7AC4009BFB
+# Thousand
 
-
+## Description
 
 This app imitates the “Thousand” game for three players.
 A detailed description of the app is available on [its own page](https://adslbarxatov.github.io/Thousand)
 
----
+&nbsp;
+
+
+
+## Описание
 
 Это приложение имитирует игру «Тысяча» для трёх игроков.
 Подробное описание приложения доступно на [отдельной странице](https://adslbarxatov.github.io/Thousand/ru)
