@@ -12,8 +12,12 @@ namespace RD_AAOW
 		{
 		// Переменные
 		private List<string> sides = new List<string> {
-			"•", "• •", "•••",
-			"• • • •", "•••••", "••••••"
+			"   " + RDLocale.RN + " ● " + RDLocale.RN + "   ",
+			"  ●" + RDLocale.RN + "   " + RDLocale.RN + "●  ",
+			"  ●" + RDLocale.RN + " ● " + RDLocale.RN + "●  ",
+			"● ●" + RDLocale.RN + "   " + RDLocale.RN + "● ●",
+			"● ●" + RDLocale.RN + " ● " + RDLocale.RN + "● ●",
+			"● ●" + RDLocale.RN + "● ●" + RDLocale.RN + "● ●",
 			}; // "Рисунки" на сторонах кубиков
 		private uint[] counts = new uint[] { 0, 0, 0, 0, 0, 0 };    // Количества разных сторон кубиков
 		private uint currentPlayer = 1;                             // Номер текущего игрока
@@ -44,7 +48,7 @@ namespace RD_AAOW
 			// Заголовок
 			this.Text = ProgramDescription.AssemblyTitle;
 			if (!RDGenerics.IsRegistryAccessible)
-				this.Text += Localization.GetDefaultText (LzDefaultTextValues.Message_LimitedFunctionality);
+				this.Text += RDLocale.GetDefaultText (RDLDefaultTexts.Message_LimitedFunctionality);
 
 			RDGenerics.LoadWindowDimensions (this);
 			LocalizeForm ();
@@ -90,17 +94,17 @@ namespace RD_AAOW
 		// Метод локализует форму
 		private void LocalizeForm ()
 			{
-			MHelp.Text = Localization.GetText ("GetHelp");
+			MHelp.Text = RDLocale.GetText ("GetHelp");
 			MLanguage.Text = "&" +
-				Localization.GetDefaultText (LzDefaultTextValues.Control_InterfaceLanguage).Replace (":", "");
-			MExit.Text = Localization.GetDefaultText (LzDefaultTextValues.Button_Exit);
+				RDLocale.GetDefaultText (RDLDefaultTexts.Control_InterfaceLanguage).Replace (":", "");
+			MExit.Text = RDLocale.GetDefaultText (RDLDefaultTexts.Button_Exit);
 
-			BSelectPlayer.Text = Localization.GetText ("WhoIsFirstButton");
-			NewCubes.Text = Localization.GetText ("ThrowDiceButton");
-			SaveScores.Text = Localization.GetText ("SaveScoresButton");
+			BSelectPlayer.Text = RDLocale.GetText ("WhoIsFirstButton");
+			NewCubes.Text = RDLocale.GetText ("ThrowDiceButton");
+			SaveScores.Text = RDLocale.GetText ("SaveScoresButton");
 
 			if (BSelectPlayer.Enabled)
-				StatusLine.Text = Localization.GetText ("FirstStatus");
+				StatusLine.Text = RDLocale.GetText ("FirstStatus");
 			}
 
 		// Вспомогательные функции
@@ -141,7 +145,7 @@ namespace RD_AAOW
 				SelectPlayerTimer.Enabled = false;
 
 				// Обновление строки состояния
-				StatusLine.Text = GetCurrentPlayerName () + Localization.GetText ("ThrowDice");
+				StatusLine.Text = GetCurrentPlayerName () + RDLocale.GetText ("ThrowDice");
 
 				// Включение кнопок
 				EnableButton (NewCubes);
@@ -228,12 +232,12 @@ namespace RD_AAOW
 					// Обновление строки состояния
 					if (preScores == 0)
 						{
-						StatusLine.Text = string.Format (Localization.GetText ("FailedThrow" +
+						StatusLine.Text = string.Format (RDLocale.GetText ("FailedThrow" +
 							(GetCurrentPlayerPreScores () != 0 ? "1" : "2")), GetCurrentPlayerName ());
 						}
 					else
 						{
-						StatusLine.Text = GetCurrentPlayerName () + Localization.GetText ("FailedThrow3");
+						StatusLine.Text = GetCurrentPlayerName () + RDLocale.GetText ("FailedThrow3");
 						}
 
 					// Сброс пре-очков
@@ -244,7 +248,7 @@ namespace RD_AAOW
 					HighlightCurrentPlayer ();
 
 					// Обновление состояния
-					StatusLine.Text += (GetCurrentPlayerName () + Localization.GetText ("ThrowDice"));
+					StatusLine.Text += (GetCurrentPlayerName () + RDLocale.GetText ("ThrowDice"));
 
 					// Переключение кнопок
 					DisableButton (SaveScores);
@@ -259,7 +263,7 @@ namespace RD_AAOW
 				if (playerScores[currentPlayer - 1] + GetCurrentPlayerPreScores () == 1000)
 					{
 					// Сообщения
-					StatusLine.Text = string.Format (Localization.GetText ("PlayerWon"), GetCurrentPlayerName ());
+					StatusLine.Text = string.Format (RDLocale.GetText ("PlayerWon"), GetCurrentPlayerName ());
 					RDGenerics.MessageBox (RDMessageTypes.Success_Center, StatusLine.Text);
 
 					// Сброс настроек и перезапуск
@@ -281,9 +285,9 @@ namespace RD_AAOW
 					}
 
 				// Включение кнопки
-				StatusLine.Text = GetCurrentPlayerName () + Localization.GetText ("SaveOrTryAgain");
+				StatusLine.Text = GetCurrentPlayerName () + RDLocale.GetText ("SaveOrTryAgain");
 				if (GetCurrentPlayerPreScores () >= 50)
-					StatusLine.Text += string.Format (Localization.GetText ("SaveOrTryAgainExt"),
+					StatusLine.Text += string.Format (RDLocale.GetText ("SaveOrTryAgainExt"),
 						GetCurrentPlayerPreScores ());
 
 				EnableButton (NewCubes);
@@ -297,7 +301,7 @@ namespace RD_AAOW
 					(playerScores[currentPlayer - 1] >= 700) && (playerScores[currentPlayer - 1] < 800) &&
 					(playerScores[currentPlayer - 1] + GetCurrentPlayerPreScores () < 800))
 					{
-					StatusLine.Text = GetCurrentPlayerName () + Localization.GetText ("Cask");
+					StatusLine.Text = GetCurrentPlayerName () + RDLocale.GetText ("Cask");
 					DisableButton (SaveScores);
 					}
 				}
@@ -550,11 +554,11 @@ namespace RD_AAOW
 
 			// Сброс пре-очков
 			ResetCurrentPlayerPreScores ();
-			StatusLine.Text = GetCurrentPlayerName () + Localization.GetText ("PointsSaved");
+			StatusLine.Text = GetCurrentPlayerName () + RDLocale.GetText ("PointsSaved");
 
 			currentPlayer = (currentPlayer % 3) + 1;
 			HighlightCurrentPlayer ();
-			StatusLine.Text += (GetCurrentPlayerName () + Localization.GetText ("ThrowDice"));
+			StatusLine.Text += (GetCurrentPlayerName () + RDLocale.GetText ("ThrowDice"));
 
 			DisableButton (SaveScores);
 			foreach (Label l in cubes)
@@ -574,7 +578,7 @@ namespace RD_AAOW
 				{
 				playerNames[i].Text = RDGenerics.GetAppSettingsValue ("P" + (i + 1).ToString ());
 				if (string.IsNullOrWhiteSpace (playerNames[i].Text))
-					playerNames[i].Text = Localization.GetText ("PlayerDefaultName") +
+					playerNames[i].Text = RDLocale.GetText ("PlayerDefaultName") +
 						(i + 1).ToString ();
 				}
 			}
@@ -666,7 +670,7 @@ namespace RD_AAOW
 		private void MainForm_FormClosing (object sender, FormClosingEventArgs e)
 			{
 			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question_Center, "FinishGame",
-				LzDefaultTextValues.Button_Yes, LzDefaultTextValues.Button_No) != RDMessageButtons.ButtonOne)
+				RDLDefaultTexts.Button_Yes, RDLDefaultTexts.Button_No) != RDMessageButtons.ButtonOne)
 				{
 				e.Cancel = true;
 				return;
