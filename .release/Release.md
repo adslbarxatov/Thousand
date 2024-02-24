@@ -1,4 +1,3 @@
-_Changes for v 2.2_:
+_Changes for v 2.2.1_:
 - Added the correct appearance for the dices;
-- Core updates have been applied;
-- Added a new version of offline help
+- Core updates have been applied
