@@ -8,7 +8,7 @@ namespace RD_AAOW
 	/// <summary>
 	/// Главная форма программы
 	/// </summary>
-	public partial class MainForm: Form
+	public partial class ThousandForm: Form
 		{
 		// Переменные
 		private List<string> sides = new List<string> {
@@ -22,7 +22,7 @@ namespace RD_AAOW
 		private uint[] counts = new uint[] { 0, 0, 0, 0, 0, 0 };    // Количества разных сторон кубиков
 		private uint currentPlayer = 1;                             // Номер текущего игрока
 		private uint[] playerScores = new uint[] { 0, 0, 0 };       // Очки игроков
-		private Random rnd = new Random ();                         // ГПСЧ
+		/*private Random rnd = new Random ();                         // ГПСЧ*/
 
 		// Ссылки на контролы
 		private List<Label> cubes;
@@ -37,13 +37,13 @@ namespace RD_AAOW
 		/// <summary>
 		/// Конструктор. Начинает работу
 		/// </summary>
-		public MainForm ()
+		public ThousandForm ()
 			{
 			InitializeComponent ();
 			}
 
 		// Загрузка формы
-		private void MainForm_Load (object sender, EventArgs e)
+		private void ThousandForm_Load (object sender, EventArgs e)
 			{
 			// Заголовок
 			this.Text = ProgramDescription.AssemblyTitle;
@@ -127,7 +127,7 @@ namespace RD_AAOW
 			foreach (TextBox t in playerNames)
 				t.Enabled = false;
 
-			SelectPlayerTimer.Interval = rnd.Next (50, 53);
+			SelectPlayerTimer.Interval = RDGenerics.RND.Next (50, 53);
 			SelectPlayerTimer.Enabled = true;
 			}
 
@@ -196,7 +196,7 @@ namespace RD_AAOW
 			// Получение новых значений
 			foreach (Label l in cubes)
 				if (l.Enabled)
-					l.Text = sides[rnd.Next (sides.Count)];
+					l.Text = sides[RDGenerics.RND.Next (sides.Count)];
 
 			// Ожидаем отпускания клавиши
 			if (rotatingBones)
@@ -667,7 +667,7 @@ namespace RD_AAOW
 			}
 
 		// Закрытие окна
-		private void MainForm_FormClosing (object sender, FormClosingEventArgs e)
+		private void ThousandForm_FormClosing (object sender, FormClosingEventArgs e)
 			{
 			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question_Center, "FinishGame",
 				RDLDefaultTexts.Button_Yes, RDLDefaultTexts.Button_No) != RDMessageButtons.ButtonOne)

@@ -28,7 +28,7 @@ namespace RD_AAOW
 			RDGenerics.ShowAbout (true);
 
 			// Запуск
-			Application.Run (new MainForm ());
+			Application.Run (new ThousandForm ());
 			}
 		}
 	}
