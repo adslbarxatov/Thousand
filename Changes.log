@@ -1,5 +1,9 @@
 Thousand: changes log
 
+Version 2.3:
+• Updated HypeHelp and Updates checker mechanics: this should fix apps freezing immediately
+  after launch (on some PCs)
+
 Version 2.2.3:
 • Updated the HypeHelp links list
 
