@@ -10,7 +10,7 @@ namespace RD_AAOW
 	/// </summary>
 	public partial class ThousandForm: Form
 		{
-		// Переменные
+		// "Рисунки" на сторонах кубиков
 		private List<string> sides = new List<string> {
 			"   " + RDLocale.RN + " ● " + RDLocale.RN + "   ",
 			"  ●" + RDLocale.RN + "   " + RDLocale.RN + "●  ",
@@ -18,11 +18,16 @@ namespace RD_AAOW
 			"● ●" + RDLocale.RN + "   " + RDLocale.RN + "● ●",
 			"● ●" + RDLocale.RN + " ● " + RDLocale.RN + "● ●",
 			"● ●" + RDLocale.RN + "● ●" + RDLocale.RN + "● ●",
-			}; // "Рисунки" на сторонах кубиков
-		private uint[] counts = new uint[] { 0, 0, 0, 0, 0, 0 };    // Количества разных сторон кубиков
-		private uint currentPlayer = 1;                             // Номер текущего игрока
-		private uint[] playerScores = new uint[] { 0, 0, 0 };       // Очки игроков
-		/*private Random rnd = new Random ();                         // ГПСЧ*/
+			};
+
+		// Количества разных сторон кубиков
+		private uint[] counts = new uint[] { 0, 0, 0, 0, 0, 0 };
+
+		// Номер текущего игрока
+		private uint currentPlayer = 1;
+
+		// Очки игроков
+		private uint[] playerScores = new uint[] { 0, 0, 0 };
 
 		// Ссылки на контролы
 		private List<Label> cubes;
@@ -47,7 +52,8 @@ namespace RD_AAOW
 			{
 			// Заголовок
 			this.Text = ProgramDescription.AssemblyTitle;
-			if (!RDGenerics.IsRegistryAccessible)
+			/*if (!RDGenerics.IsRegistryAccessible)*/
+			if (!RDGenerics.AppHasAccessRights (false, true))
 				this.Text += RDLocale.GetDefaultText (RDLDefaultTexts.Message_LimitedFunctionality);
 
 			RDGenerics.LoadWindowDimensions (this);
