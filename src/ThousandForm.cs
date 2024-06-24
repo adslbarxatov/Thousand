@@ -52,7 +52,6 @@ namespace RD_AAOW
 			{
 			// Заголовок
 			this.Text = ProgramDescription.AssemblyTitle;
-			/*if (!RDGenerics.IsRegistryAccessible)*/
 			if (!RDGenerics.AppHasAccessRights (false, true))
 				this.Text += RDLocale.GetDefaultText (RDLDefaultTexts.Message_LimitedFunctionality);
 
@@ -582,7 +581,11 @@ namespace RD_AAOW
 			{
 			for (int i = 0; i < playerNames.Count; i++)
 				{
-				playerNames[i].Text = RDGenerics.GetAppSettingsValue ("P" + (i + 1).ToString ());
+				/*playerNames[i].Text = RDGenerics.GetAppSettingsValue ("P" + (i + 1).ToString ());
+				*/
+				playerNames[i].Text = RDGenerics.GetSettings ("P" + (i + 1).ToString (),
+					RDLocale.GetText ("PlayerDefaultName" + (i + 1).ToString ()));
+
 				if (string.IsNullOrWhiteSpace (playerNames[i].Text))
 					playerNames[i].Text = RDLocale.GetText ("PlayerDefaultName") +
 						(i + 1).ToString ();
@@ -591,9 +594,11 @@ namespace RD_AAOW
 
 		private void SaveNames ()
 			{
-			RDGenerics.SetAppSettingsValue ("P1", Player1Name.Text);
+			/*RDGenerics.SetAppSettingsValue ("P1", Player1Name.Text);
 			RDGenerics.SetAppSettingsValue ("P2", Player2Name.Text);
-			RDGenerics.SetAppSettingsValue ("P3", Player3Name.Text);
+			RDGenerics.SetAppSettingsValue ("P3", Player3Name.Text);*/
+			for (int i = 0; i < playerNames.Count; i++)
+				RDGenerics.SetSettings ("P" + (i + 1).ToString (), playerNames[i].Text);
 			}
 
 		/// <summary>
