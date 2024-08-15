@@ -1,3 +1,3 @@
-_Changes for v 2.4.2_:
-- `XPUN` update has been applied;
-- The application has been retargeted to `.NET Framework 4.8.1`
+_Changes for v 2.4.3_:
+- The “App about” interface has been updated;
+- `XPUN` update has been applied
