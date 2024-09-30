@@ -154,7 +154,7 @@
     <value>Нужно определить, кто будет бросать кости первым</value>
   </data>
   <data name="SaveScoresButton" xml:space="preserve">
-    <value>&amp;Оставить очки</value>
+    <value>Со&amp;хранить очки</value>
   </data>
   <data name="ThrowDiceButton" xml:space="preserve">
     <value>&amp;Бросить кости</value>

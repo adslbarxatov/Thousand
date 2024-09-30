@@ -1,3 +1,3 @@
-_Changes for v 2.4.4_:
-- The new identity has been applied;
-- The “App about” interface has been updated
+_Changes for v 2.4.5_:
+- Current updates have been applied;
+- The new identity has been applied
