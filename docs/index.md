@@ -5,7 +5,7 @@
 
 - [General information](#general-information-about-thousand-game)
 - [Download links](https://adslbarxatov.github.io/DPArray#thousand)
-- [Русская версия](https://adslbarxatov.github.io/Thousand/ru)
+- [Версия на русском языке](https://adslbarxatov.github.io/Thousand/ru)
 
 ---
 
