@@ -269,7 +269,7 @@ namespace RD_AAOW
 					{
 					// Сообщения
 					StatusLine.Text = string.Format (RDLocale.GetText ("PlayerWon"), GetCurrentPlayerName ());
-					RDGenerics.MessageBox (RDMessageTypes.Success_Center, StatusLine.Text);
+					RDInterface.MessageBox (RDMessageTypes.Success_Center, StatusLine.Text);
 
 					// Сброс настроек и перезапуск
 					for (int i = 0; i < playerNames.Count; i++)
@@ -662,20 +662,20 @@ namespace RD_AAOW
 		// Вызов справки
 		private void MHelp_Click (object sender, EventArgs e)
 			{
-			RDGenerics.ShowAbout (false);
+			RDInterface.ShowAbout (false);
 			}
 
 		// Изменение языка интерфейса
 		private void MLanguage_Click (object sender, EventArgs e)
 			{
-			if (RDGenerics.MessageBox ())
+			if (RDInterface.MessageBox ())
 				LocalizeForm ();
 			}
 
 		// Закрытие окна
 		private void ThousandForm_FormClosing (object sender, FormClosingEventArgs e)
 			{
-			if (RDGenerics.LocalizedMessageBox (RDMessageTypes.Question_Center, "FinishGame",
+			if (RDInterface.LocalizedMessageBox (RDMessageTypes.Question_Center, "FinishGame",
 				RDLDefaultTexts.Button_Yes, RDLDefaultTexts.Button_No) != RDMessageButtons.ButtonOne)
 				{
 				e.Cancel = true;
